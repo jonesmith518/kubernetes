@@ -749,6 +749,7 @@ func (adc *attachDetachController) addNodeToDswp(node *v1.Node, nodeName types.N
 
 		// Node specifies annotation indicating it should be managed by attach
 		// detach controller. Add it to desired state of world.
+		// todo use instance id from openstack as nodeName
 		adc.desiredStateOfWorld.AddNode(nodeName, keepTerminatedPodVolumes)
 	}
 }
